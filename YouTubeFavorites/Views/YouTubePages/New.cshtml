@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Add a new page to @Model.Name</h1>
+
+<form action="/categories/@Model.Id/pages" method="post">
+  <input id="categoryId" name="categoryId" type="hidden" value="@Model.Id">
+  <label for="pageTitle">Page Title</label>
+  <input id="pageTitle" name="pageTitle" type="text">
+  <label for="pageDescription">Page Description</label>
+  <input id="pageDescription" name="pageDescription" type="text">
+  <label for="pageLink">Page Link</label>
+  <input id="pageLink" name="pageLink" type="text">
+  <button type='submit'>Add Item</button>
+</form>
