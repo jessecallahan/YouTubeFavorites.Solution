@@ -48,6 +48,7 @@ namespace YouTubeFavorites.Controllers
       Dictionary<string, object> model = new Dictionary<string, object>();
       Category foundCategory = Category.Find(categoryId);
       YouTubePage newYouTubePage = new YouTubePage(youtubepageTitle, youtubepageDescription, youtubepageLink);
+      newYouTubePage.Save();
       foundCategory.AddYouTubePage(newYouTubePage);
       List<YouTubePage> categoryYouTubePages = foundCategory.YouTubePages;
       model.Add("youtubepages", categoryYouTubePages);

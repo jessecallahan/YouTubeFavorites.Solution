@@ -9,7 +9,7 @@
 <ol>
   @foreach (YouTubePage youtubepage in @Model["youtubepages"])
   {
-    <li><a href='/categories/@Model["category"].Id/youtubepages/@youtubepage.Id'>@youtubepage.Description</a></li>
+    <li><a href='/categories/@Model["category"].Id/youtubepages/@youtubepage.Id'>@youtubepage.Title</a></li>
   }
 </ol>
 
